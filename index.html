@@ -12,7 +12,7 @@
         .title{
 
            text-align: center;
-           font-family: monospace;
+           font-weight: bold;
            margin: 50px;
 
         }
@@ -37,6 +37,41 @@
     </style>
 </head>
 <body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Applets
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Applet 1/applet-1.html">Applet 1</a></li>
+              <li><a class="dropdown-item" href="Applet 2/index.html">Applet 2</a></li>
+              <li><a class="dropdown-item" href="Applet 3/index.html">Applet 3</a></li>
+             
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+
+
+
+
     <h1 class="title"> APP GALLERY </h1>
 
     <div class="applet-flex-container">
@@ -50,7 +85,7 @@
         website that allows you to input a text and it automatically shows 
         the text and it also have a display button that when you click it it 
         will dispaly what you just typed</p>
-      <a href="Applet 1/applet-1.html" class="btn btn-primary">Go to applet-1</a>
+      <a href="Applet 1/applet-1.html" class="btn btn-primary">Go to applet</a>
     </div>
 
   </div>
@@ -59,9 +94,9 @@
     <img src="https://imgs.search.brave.com/E3Ye8km7sMPm8a1JsexiMGqy0TJerLE1z8-NzPftZaw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEwNFpjbVgtM0wu/anBn" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Applet-2</h5>
-      <p class="card-text">This is the applet 2, this will take you to website or 
+      <p class="card-text">This is the applet 2, this will take you to a website or 
         an applet that renders a Leaflet and Openstreetmap interactive map. </p>
-      <a href="Applet 2/index.html" class="btn btn-primary">Go to applet-2</a>
+      <a href="Applet 2/index.html" class="btn btn-primary">Go to applet</a>
     </div>
   </div>
   <!-- Applet 3 -->
@@ -69,8 +104,11 @@
     <img src="https://imgs.search.brave.com/E3Ye8km7sMPm8a1JsexiMGqy0TJerLE1z8-NzPftZaw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEwNFpjbVgtM0wu/anBn" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Applet-3</h5>
-      <p class="card-text">This is the applet 1, this will take you to .............</p>
-      <a href="#" class="btn btn-primary">Go to applet-3</a>
+      <p class="card-text">This is the applet 3, this will take you to a website or applet
+        that consists of s button and two disply element that consist of the things such as the thing that shows
+        the logs and date, and the one that shows the total number of logs.
+      </p>
+      <a href="Applet 3/index.html" class="btn btn-primary">Go to applet</a>
     </div>
   </div>
 
