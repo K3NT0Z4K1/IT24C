@@ -1,0 +1,21 @@
+[
+    {
+      "student_id": 1,
+      "student_name": "Kent Ryan",
+      "student_program": "BS-Computer Science",
+      "student_enrolled_date": "2023-01-15"
+    },
+    {
+      "student_id": 2,
+      "student_name": "Jacob Ranin",
+      "student_program": "BS-Computer Engineering",
+      "student_enrolled_date": "2023-02-20"
+    },
+    {
+      "student_id": 3,
+      "student_name": "Dexter Eviota",
+      "student_program": "BS - Information Technology",
+      "student_enrolled_date": "2023-03-10"
+    }
+  ]
+  

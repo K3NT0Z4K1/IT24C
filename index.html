@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applet Activity</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-
+    <title>IT24 Resources</title>
     <style>
-        .title{
-
-           text-align: center;
-           font-weight: bold;
-           margin: 50px;
-
-        }
         .applet-flex-container{
-          
-          justify-content: center;
-          display:flex;
-          margin-left: 3rem;
-          
-         
-
+            display:flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            width: 80%;
         }
-        .applet-flex-container > div {
-          margin-left: 15px;
+
+        .applet-flex-container > div{
+            margin-left: .5rem;
+        }
+
+        .title{
+            margin-top: 1rem;
+            margin-left: 3rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .applet-card{
+          flex: 1 1 20rem; 
+          max-width: 25rem;
+          height: 18rem;
+          margin-bottom: 1rem;
+          box-sizing: border-box;
         }
         body{
           background-color: aqua;
         }
 
-
-        
     </style>
 </head>
-<body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +59,7 @@
               <li><a class="dropdown-item" href="Applet 1/applet-1.html">Applet 1</a></li>
               <li><a class="dropdown-item" href="Applet 2/index.html">Applet 2</a></li>
               <li><a class="dropdown-item" href="Applet 3/index.html">Applet 3</a></li>
-             
+              <li><a class="dropdown-item" href="Applet 4/index.html">Applet 4</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -69,51 +74,56 @@
     </div>
 </nav>
 
+<body>
 
+    <h1 class="title" >Event Driven Programming Library</h1>
+      <div class="applet-flex-container">
+          <!--Applet 1 Card-->
+          <div class="card applet-card" >
+              <div class="card-body">
+                <h5 class="card-title">Applet 1 - Basic Events </h5>
+                <p class="card-text">This is the applet 1, this will take you to a 
+                  website that allows you to input a text and it automatically shows 
+                  the text and it also have a display button that when you click it it 
+                  will dispaly what you just typed</p>
+                <a href="Applet 1/applet-1.html" class="btn btn-primary">Go to Applet</a>
+              </div>
+          </div>
 
+          <!--Applet 2 Card-->
+          <div class="card applet-card" >
+            <div class="card-body">
+              <h5 class="card-title">Applet 2 - Leaflet Map</h5>
+              <p class="card-text">This is the applet 2, this will take you to a website or 
+                an applet that renders a Leaflet and Openstreetmap interactive map. </p>
+              <a href="Applet 2/index.html" class="btn btn-primary">Go to Applet</a>
+            </div>
+          </div>
 
-    <h1 class="title"> APP GALLERY </h1>
+          <!--Applet 3 Card-->
+          <div class="card applet-card" >
+            <div class="card-body">
+              <h5 class="card-title">Applet 3 - Event Button Logger </h5>
+              <p class="card-text">This is the applet 3, this will take you to a website or applet
+                that consists of s button and two disply element that consist of the things such as the thing that shows
+                the logs and date, and the one that shows the total number of logs.
+              </p>
+              <a href="Applet 3/index.html" class="btn btn-primary">Go to Applet</a>
+            </div>
+          </div>
 
-    <div class="applet-flex-container">
+           <!--Applet 4 Card-->
+           <div class="card applet-card" >
+            <div class="card-body">
+              <h5 class="card-title">Applet 4 - Dynamic Elements </h5>
+              <p class="card-text">This application applies dynamic elements such as rendering DOM elements from a list</p>
+              <a href="Applet 4/index.html" class="btn btn-primary">Go to Applet</a>
+            </div>
+          </div>
 
-      <!-- Applet 1 -->
-<div class="card" style="width: 18rem;">
-    <img src="https://imgs.search.brave.com/E3Ye8km7sMPm8a1JsexiMGqy0TJerLE1z8-NzPftZaw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEwNFpjbVgtM0wu/anBn" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Applet-1</h5>
-      <p class="card-text">This is the applet 1, this will take you to a 
-        website that allows you to input a text and it automatically shows 
-        the text and it also have a display button that when you click it it 
-        will dispaly what you just typed</p>
-      <a href="Applet 1/applet-1.html" class="btn btn-primary">Go to applet</a>
-    </div>
-
-  </div>
-  <!-- Applet 2 -->
-<div class="card" style="width: 18rem;">
-    <img src="https://imgs.search.brave.com/E3Ye8km7sMPm8a1JsexiMGqy0TJerLE1z8-NzPftZaw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEwNFpjbVgtM0wu/anBn" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Applet-2</h5>
-      <p class="card-text">This is the applet 2, this will take you to a website or 
-        an applet that renders a Leaflet and Openstreetmap interactive map. </p>
-      <a href="Applet 2/index.html" class="btn btn-primary">Go to applet</a>
-    </div>
-  </div>
-  <!-- Applet 3 -->
-<div class="card" style="width: 18rem;">
-    <img src="https://imgs.search.brave.com/E3Ye8km7sMPm8a1JsexiMGqy0TJerLE1z8-NzPftZaw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEwNFpjbVgtM0wu/anBn" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Applet-3</h5>
-      <p class="card-text">This is the applet 3, this will take you to a website or applet
-        that consists of s button and two disply element that consist of the things such as the thing that shows
-        the logs and date, and the one that shows the total number of logs.
-      </p>
-      <a href="Applet 3/index.html" class="btn btn-primary">Go to applet</a>
-    </div>
-  </div>
-
-</div>
-
-      
+          
+          </div>
+          
+      </div>
 </body>
 </html>
