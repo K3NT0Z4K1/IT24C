@@ -22,6 +22,12 @@
         "student_name": "Lylle Eviota",
         "student_program": "BS - Information Technology",
         "student_enrolled_date": "2023-03-11"
+      },
+      {
+        "student_id": 5,
+        "student_name": "Oscar Eviota",
+        "student_program": "BS - Information Technology",
+        "student_enrolled_date": "2023-03-12"
       }
   ]
   
