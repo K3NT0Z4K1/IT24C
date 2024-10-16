@@ -1,58 +1,56 @@
-class StudentList {
-    
-    constructor(dataUrl) {
-        this.dataUrl = dataUrl;
-        this.students = [];
+class CardList {
+    constructor(cards) {
+        this.cards = cards;
         this.init();
     }
 
-    async init() {
-        await this.fetchData();
-        this.renderStudentList(this.students); 
+    init() {
+        this.renderCardList(this.cards, 'studentList');
         this.bindSearchEvent();
     }
 
-    async fetchData() {
-        try {
-            const response = await fetch(this.dataUrl);
-            this.students = await response.json();
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    }
-
-    renderStudentList(students) {
-        const studentListContainer = document.getElementById('studentList');
-        studentListContainer.innerHTML = students.map(student => 
-            `<button class="btn btn-primary" style="margin-top:15px; 
-                                                    width:25rem">
-                ${student.student_name} | ${student.student_program}
-            </button><br>`
+    renderCardList(cards, containerId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = cards.map(card => 
+            `<div class="card applet-card" style="margin-bottom: 1rem;">
+                <div class="card-body">
+                    <h5 class="card-title">${card.name}</h5>
+                    <p class="card-text">${card.program}</p>
+                </div>
+            </div>`
         ).join('');
     }
 
     bindSearchEvent() {
-        const studentSearchBar = document.getElementById('studentSearchBar');
-        const studentSearchListContainer = document.getElementById('studentSearchList');
+        const cardSearchBar = document.getElementById('studentSearchBar');
+        const cardSearchListContainer = document.getElementById('studentSearchList');
 
-        studentSearchBar.addEventListener('input', () => {
-            this.filterStudents(studentSearchBar.value, studentSearchListContainer);
+        cardSearchBar.addEventListener('input', () => {
+            this.filterCards(cardSearchBar.value, cardSearchListContainer);
         });
 
-        this.renderStudentList(this.students, studentSearchListContainer);
+        // Render the full card list initially
+        this.renderCardList(this.cards, 'studentList');
     }
 
-    filterStudents(query, searchListContainer) {
-        const filteredStudents = this.students.filter(student => {
-            const fullName = `${student.student_name} ${student.student_program}`;
+    filterCards(query, searchListContainer) {
+        const filteredCards = this.cards.filter(card => {
+            const fullName = `${card.name} ${card.program}`;
             return fullName.toLowerCase().includes(query.toLowerCase());
         });
 
-        searchListContainer.innerHTML = '';
-
-        this.renderStudentList(filteredStudents, searchListContainer);
+        // Render filtered cards
+        this.renderCardList(filteredCards, 'studentSearchList');
     }
-    
 }
 
-const studentList = new StudentList('applet-4.json');
+// Sample card data directly in JavaScript
+const cardData = [
+    { name: 'John Doe', program: 'Computer Science' },
+    { name: 'Jane Smith', program: 'Information Technology' },
+    { name: 'Emily Johnson', program: 'Software Engineering' },
+    { name: 'Michael Brown', program: 'Web Development' }
+];
+
+// Instantiate the CardList with the sample data
+const cardList = new CardList(cardData);
