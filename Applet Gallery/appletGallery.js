@@ -1,56 +1,55 @@
-class CardList {
-    constructor(cards) {
-        this.cards = cards;
+class AppletList {
+    constructor(dataUrl) {
+        this.dataUrl = dataUrl;
+        this.applets = [];
         this.init();
     }
 
-    init() {
-        this.renderCardList(this.cards, 'studentList');
+    async init() {
+        await this.fetchData();
+        this.renderAppletList(this.applets); 
         this.bindSearchEvent();
     }
 
-    renderCardList(cards, containerId) {
-        const container = document.getElementById(containerId);
-        container.innerHTML = cards.map(card => 
-            `<div class="card applet-card" style="margin-bottom: 1rem;">
-                <div class="card-body">
-                    <h5 class="card-title">${card.name}</h5>
-                    <p class="card-text">${card.program}</p>
-                </div>
-            </div>`
+    async fetchData() {
+        try {
+            const response = await fetch(this.dataUrl);
+            const data = await response.json();
+            this.applets = data.applets; // Update to access the applets array
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    renderAppletList(applets, container) {
+        container.innerHTML = applets.map(applet => 
+            `<button class="btn btn-primary" style="margin-top:15px; width:25rem" onclick="location.href='${applet.link}'">
+                ${applet.title}
+            </button><br>`
         ).join('');
     }
 
     bindSearchEvent() {
-        const cardSearchBar = document.getElementById('studentSearchBar');
-        const cardSearchListContainer = document.getElementById('studentSearchList');
+        const appletSearchBar = document.getElementById('appletSearchBar');
+        const appletSearchListContainer = document.getElementById('appletSearchList');
 
-        cardSearchBar.addEventListener('input', () => {
-            this.filterCards(cardSearchBar.value, cardSearchListContainer);
+        appletSearchBar.addEventListener('input', () => {
+            this.filterApplets(appletSearchBar.value, appletSearchListContainer);
         });
 
-        // Render the full card list initially
-        this.renderCardList(this.cards, 'studentList');
+        this.renderAppletList(this.applets, appletSearchListContainer);
     }
 
-    filterCards(query, searchListContainer) {
-        const filteredCards = this.cards.filter(card => {
-            const fullName = `${card.name} ${card.program}`;
-            return fullName.toLowerCase().includes(query.toLowerCase());
-        });
+    filterApplets(query, searchListContainer) {
+        const filteredApplets = this.applets.filter(applet => 
+            applet.title.toLowerCase().includes(query.toLowerCase()) || 
+            applet.description.toLowerCase().includes(query.toLowerCase())
+        );
 
-        // Render filtered cards
-        this.renderCardList(filteredCards, 'studentSearchList');
+        searchListContainer.innerHTML = '';
+        this.renderAppletList(filteredApplets, searchListContainer);
     }
 }
 
-// Sample card data directly in JavaScript
-const cardData = [
-    { name: 'John Doe', program: 'Computer Science' },
-    { name: 'Jane Smith', program: 'Information Technology' },
-    { name: 'Emily Johnson', program: 'Software Engineering' },
-    { name: 'Michael Brown', program: 'Web Development' }
-];
-
-// Instantiate the CardList with the sample data
-const cardList = new CardList(cardData);
+// Initialize the applet list with the JSON file
+const appletList = new AppletList('applet-4.json');

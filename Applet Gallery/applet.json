@@ -1,0 +1,30 @@
+{
+    "title": "Event Driven Programming Library",
+    "applets": [
+      {
+        "title": "Applet 1 - Basic Events",
+        "description": "This is the applet 1, this will take you to a website that allows you to input a text and it automatically shows the text and it also has a display button that when you click it will display what you just typed.",
+        "link": "/Applet 1/applet-1.html",
+        "buttonText": "Go to Applet"
+      },
+      {
+        "title": "Applet 2 - Leaflet Map",
+        "description": "This is the applet 2, this will take you to a website or an applet that renders a Leaflet and Openstreetmap interactive map.",
+        "link": "/Applet 2/index.html",
+        "buttonText": "Go to Applet"
+      },
+      {
+        "title": "Applet 3 - Event Button Logger",
+        "description": "This is the applet 3, this will take you to a website or applet that consists of a button and two display elements that show the logs and date, and the total number of logs.",
+        "link": "/Applet 3/index.html",
+        "buttonText": "Go to Applet"
+      },
+      {
+        "title": "Applet 4 - Dynamic Elements",
+        "description": "This application applies dynamic elements such as rendering DOM elements from a list.",
+        "link": "/Applet 4/index.html",
+        "buttonText": "Go to Applet"
+      }
+    ]
+  }
+  
