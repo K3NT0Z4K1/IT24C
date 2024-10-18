@@ -10,5 +10,11 @@
       "description": "This is the applet 2, this will take you to a website or an applet that renders a Leaflet and Openstreetmap interactive map..",
       "imageUrl": "",
       "link": "/Applet 2/index.html"
+  },
+  {
+      "title": "Applet 3 - Event Logger",
+      "description": "This is the applet 3, this will take you to a website or applet that consists of s button and two disply element that consist of the things such as the thing that shows the logs and date, and the one that shows the total number of logs.",
+      "imageUrl": "",
+      "link": "/Applet 3/index.html"
   }
 ]
