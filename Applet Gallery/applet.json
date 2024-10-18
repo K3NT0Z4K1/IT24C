@@ -4,5 +4,11 @@
       "description": "This is the applet 1, this will take you to a website that allows you to input a text and it automatically shows the text and it also have a display button that when you click it it will dispaly what you just typed",
       "imageUrl": "",
       "link": "/Applet 1/applet-1.html"
+  },
+  {
+      "title": "Applet 2 - Leaflet Map",
+      "description": "This is the applet 2, this will take you to a website or an applet that renders a Leaflet and Openstreetmap interactive map..",
+      "imageUrl": "",
+      "link": "/Applet 2/index.html"
   }
 ]
