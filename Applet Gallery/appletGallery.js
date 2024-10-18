@@ -56,3 +56,16 @@ document.getElementById('searchButton').addEventListener('click', function () {
     const filteredApplets = applets.filter(applet =>
       applet.title.toLowerCase().includes(searchInput)
     );
+
+
+    
+
+  renderApplets(filteredApplets);
+});
+
+
+document.getElementById('searchInput').addEventListener('input', function () {
+  if (!this.value) {
+    renderApplets(applets); 
+  }
+});
