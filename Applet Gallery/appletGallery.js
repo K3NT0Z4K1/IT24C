@@ -24,4 +24,27 @@ fetch('applet.json')
         img.classList.add('card-img-top');
         img.height = 180;
 
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
     
+        const title = document.createElement('h5');
+        title.classList.add('card-title');
+        title.textContent = applet.title;
+    
+        const text = document.createElement('p');
+        text.classList.add('card-text');
+        text.textContent = applet.description;
+    
+        const button = document.createElement('a');
+        button.classList.add('btn', 'btn-primary');
+        button.href = applet.link;
+        button.textContent = 'Go to Applet';
+    
+        cardBody.appendChild(title);
+        cardBody.appendChild(text);
+        cardBody.appendChild(button);
+        card.appendChild(img);
+        card.appendChild(cardBody);
+        appletContainer.appendChild(card);
+      });
+    }
