@@ -1,55 +1,64 @@
-class AppletList {
-    constructor(dataUrl) {
-        this.dataUrl = dataUrl;
-        this.applets = [];
-        this.init();
-    }
+let applets = [];
 
-    async init() {
-        await this.fetchData();
-        this.renderAppletList(this.applets); 
-        this.bindSearchEvent();
-    }
+fetch('applet.json')
+  .then(response => response.json())
+  .then(data => {
+    applets = data; 
+    renderApplets(applets); 
+  })
+  .catch(error => console.error('Error fetching JSON:', error));
 
-    async fetchData() {
-        try {
-            const response = await fetch(this.dataUrl);
-            const data = await response.json();
-            this.applets = data.applets; // Update to access the applets array
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    }
 
-    renderAppletList(applets, container) {
-        container.innerHTML = applets.map(applet => 
-            `<button class="btn btn-primary" style="margin-top:15px; width:25rem" onclick="location.href='${applet.link}'">
-                ${applet.title}
-            </button><br>`
-        ).join('');
-    }
+function renderApplets(applets) {
+  const appletContainer = document.getElementById('appletContainer');
+  appletContainer.innerHTML = '';
 
-    bindSearchEvent() {
-        const appletSearchBar = document.getElementById('appletSearchBar');
-        const appletSearchListContainer = document.getElementById('appletSearchList');
+  applets.forEach(applet => {
+    const card = document.createElement('div');
+    card.classList.add('card');
 
-        appletSearchBar.addEventListener('input', () => {
-            this.filterApplets(appletSearchBar.value, appletSearchListContainer);
-        });
+    const img = document.createElement('img');
+    img.src = applet.imageUrl;
+    img.classList.add('card-img-top');
+    img.height = 180;
 
-        this.renderAppletList(this.applets, appletSearchListContainer);
-    }
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
 
-    filterApplets(query, searchListContainer) {
-        const filteredApplets = this.applets.filter(applet => 
-            applet.title.toLowerCase().includes(query.toLowerCase()) || 
-            applet.description.toLowerCase().includes(query.toLowerCase())
-        );
+    const title = document.createElement('h5');
+    title.classList.add('card-title');
+    title.textContent = applet.title;
 
-        searchListContainer.innerHTML = '';
-        this.renderAppletList(filteredApplets, searchListContainer);
-    }
+    const text = document.createElement('p');
+    text.classList.add('card-text');
+    text.textContent = applet.description;
+
+    const button = document.createElement('a');
+    button.classList.add('btn', 'btn-primary');
+    button.href = applet.link;
+    button.textContent = 'Go to Applet';
+
+    cardBody.appendChild(title);
+    cardBody.appendChild(text);
+    cardBody.appendChild(button);
+    card.appendChild(img);
+    card.appendChild(cardBody);
+    appletContainer.appendChild(card);
+  });
 }
 
-// Initialize the applet list with the JSON file
-const appletList = new AppletList('applet-4.json');
+
+document.getElementById('searchButton').addEventListener('click', function () {
+  const searchInput = document.getElementById('searchInput').value.toLowerCase();
+  const filteredApplets = applets.filter(applet =>
+    applet.title.toLowerCase().includes(searchInput)
+  );
+  renderApplets(filteredApplets);
+});
+
+
+document.getElementById('searchInput').addEventListener('input', function () {
+  if (!this.value) {
+    renderApplets(applets); 
+  }
+});
