@@ -1,0 +1,25 @@
+.title {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  text-align: center;
+}
+
+.applet-flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.card {
+  width: 15rem;
+  margin: 0.5rem;
+}
+
+body{
+  background-color: aqua;
+}

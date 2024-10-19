@@ -2,25 +2,25 @@
   {
       "title": "Applet 1 - Basic Events",
       "description": "This is the applet 1, this will take you to a website that allows you to input a text and it automatically shows the text and it also have a display button that when you click it it will dispaly what you just typed",
-      "imageUrl": "",
+      "imageUrl": "Applet Gallery/applet backgound image.jpg",
       "link": "/Applet 1/applet-1.html"
   },
   {
       "title": "Applet 2 - Leaflet Map",
       "description": "This is the applet 2, this will take you to a website or an applet that renders a Leaflet and Openstreetmap interactive map..",
-      "imageUrl": "",
+      "imageUrl": "Applet Gallery/applet backgound image.jpg",
       "link": "/Applet 2/index.html"
   },
   {
       "title": "Applet 3 - Event Logger",
       "description": "This is the applet 3, this will take you to a website or applet that consists of s button and two disply element that consist of the things such as the thing that shows the logs and date, and the one that shows the total number of logs.",
-      "imageUrl": "",
+      "imageUrl": "Applet Gallery/applet backgound image.jpg",
       "link": "/Applet 3/index.html"
   },
   {
       "title": "Applet 4 - Dynamic Elements",
       "description": "This application applies dynamic elements such as rendering DOM elements from a list",
-      "imageUrl": "",
+      "imageUrl": "Applet Gallery/applet backgound image.jpg",
       "link": "/Applet 4/index.html"
   }
 ]
