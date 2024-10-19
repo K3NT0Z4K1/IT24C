@@ -66,7 +66,8 @@ fetch('applet.json')
 document.getElementById('searchButton').addEventListener('click', function () {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const filteredApplets = applets.filter(applet =>
-      applet.title.toLowerCase().includes(searchInput)
+      applet.title1.toLowerCase().includes(searchInput) ||
+      applet.title2.toLowerCase().includes(searchInput)
     );
 
 
