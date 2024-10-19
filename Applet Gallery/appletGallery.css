@@ -2,6 +2,8 @@
   margin-top: 1rem;
   margin-left: 3rem;
   text-align: center;
+  color: aliceblue;
+  font-family: Georgia;
 }
 
 .applet-flex-container {
@@ -21,5 +23,5 @@
 }
 
 body{
-  background-color: aqua;
+  background: linear-gradient(to right, purple, #00f);
 }
