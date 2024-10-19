@@ -1,6 +1,6 @@
 let applets = [];
 
-fetch('Applet Gallery/applet.json')
+fetch('../Applet Gallery/applet.json')
   .then(response => response.json())
   .then(data => {
     applets = data; 
