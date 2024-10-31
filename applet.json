@@ -30,7 +30,7 @@
   {
     "title1": "Applet - 5",
     "title2": "Open Weather",
-    "description": "This application is the basic usage of the Openweather API",
+    "description": "This is the applet 5, this will take you to the applet that have an application with the basic usage of the Openweather API",
     "imageUrl": "Applet Gallery/applet backgound image.jpg",
     "link": "/Applet 5/index.html"
   }
