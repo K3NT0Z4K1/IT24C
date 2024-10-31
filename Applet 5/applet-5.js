@@ -59,4 +59,28 @@ class WeatherService extends WeatherApp {
           alert('Please enter a city name.');
       }
   }
+
+
+  
+  async fetchWeatherByLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                const { latitude, longitude } = position.coords;
+                const data = await this.getWeatherDataByCoordinates(latitude, longitude);
+                if (data) {
+                    this.displayWeather(data);
+                    this.cityInput.value = '';
+                } else {
+                    alert('Unable to retrieve weather data for your location.');
+                }
+            },
+            () => {
+                alert('Unable to retrieve your location. Please allow location access.');
+            }
+        );
+    } else {
+        alert('Geolocation is not supported by this browser.');
+    }
+  }
 }
