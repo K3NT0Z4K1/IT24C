@@ -26,5 +26,12 @@
       "description": "This is the applet 4, this will take you to a website that have an application that applies dynamic elements such as rendering DOM elements from a list",
       "imageUrl": "Applet Gallery/applet backgound image.jpg",
       "link": "/Applet 4/index.html"
+  },
+  {
+    "title1": "Applet - 5",
+    "title2": "Open Weather",
+    "description": "This application is the basic usage of the Openweather API",
+    "imageUrl": "Applet Gallery/applet backgound image.jpg",
+    "link": "./applet-5/"
   }
 ]
