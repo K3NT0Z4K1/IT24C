@@ -20,7 +20,86 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               
 
+              <!-- Applets -->
 
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../applet-1/">Applet 1</a></li>
+              <li><a class="dropdown-item" href="../applet-2/">Applet 2</a></li>
+              <li><a class="dropdown-item" href="../applet-4/">Applet 4</a></li>
+              <li><a class="dropdown-item" href="../applet-5/">Applet 5</a></li>
+              <li><a class="dropdown-item" href="../applet-6/">Applet 6</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+
+    <div class="container">
+      
+           <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal" style="margin-top: 2rem;">
+          Input Information
+        </button>
+        
+        <div class="card" style="margin-top: 2rem;">
+          <div class="card-body" >
+            <div id="weatherCard" style="display: none;">
+              <br>
+              <img id="weatherIcon" src="" alt="Weather Icon" style="width: 100px; height: auto;">
+              <h2 id="cityName"></h2>
+              <p id="temperature"></p>
+              <p id="description"></p>
+              <p id="humidity"></p>
+              <p id="windSpeed"></p>
+          </div>
+          </div>
+        </div>
+
+        
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h1>Weather App</h1>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">API Key</label>
+              <input type="password" class="form-control" id="apiKeyInput" placeholder="Enter API Key">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">City</label>
+              <input type="text" class="form-control" id="cityInput" placeholder="Enter city name">
+            </div>
+    
+    
+          </div>
+          <div class="modal-footer">
+            <button id="getWeatherBtn" class="btn btn-primary" data-bs-dismiss="modal">Get Weather</button>
+    
+            <!--Via Geolocation-->
+            <button id="getLocationBtn" class="btn btn-secondary" data-bs-dismiss="modal">Use My Location</button>
+          </div>
+        </div>
+      </div>
+    </div>
   
   
 </body>
