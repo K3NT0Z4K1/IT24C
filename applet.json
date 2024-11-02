@@ -33,5 +33,12 @@
     "description": "This is the applet 5, this will take you to the applet that have an application with the basic usage of the Openweather API",
     "imageUrl": "Applet Gallery/applet backgound image.jpg",
     "link": "./Applet 5/"
+  },
+  {
+    "title1": "Applet - 6",
+    "title2": "To do List",
+    "description": "This is the applet 6, this will take you to the applet that have a to-do list is a tool that helps individuals manage tasks by allowing them to add, edit, and remove items.",
+    "imageUrl": "Applet Gallery/applet backgound image.jpg",
+    "link": "./Applet 6/"
   }
 ]
