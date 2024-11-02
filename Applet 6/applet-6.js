@@ -56,4 +56,11 @@ removeTask(event) {
   this.todoList.removeChild(event.target.closest('.todo-item'));
 }
 
+editTask(event) {
+  const taskItem = event.target.closest('.todo-item');
+  this.todoInput.value = taskItem.querySelector('.task-text').textContent;
+  this.editingIndex = Array.from(this.todoList.children).indexOf(taskItem);
+  this.addButton.textContent = 'Update';
+}
+
 }
